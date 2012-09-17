@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ArtistTextSize">40dp</dimen>
+    <dimen name="AlbumTextSize">34dp</dimen>
+    <dimen name="TrackTextSize">40dp</dimen>
+</resources>

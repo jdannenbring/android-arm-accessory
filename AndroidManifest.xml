@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="adeneo.accessory.pictureframe"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="14" android:maxSdkVersion="14"/>
+
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+        <activity
+            android:label="@string/app_name"
+            android:name=".ADKPictureFrame" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"/>
+            </intent-filter>
+            <meta-data android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+        			android:resource="@xml/device_filter" />
+        </activity>
+        
+        <service
+            android:name=".ADKUsbService" >
+            <intent-filter >
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"/>
+            </intent-filter>
+            
+            <meta-data android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+        			android:resource="@xml/device_filter" />
+        </service>
+    </application>
+
+</manifest>
